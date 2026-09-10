@@ -34,8 +34,8 @@ requests>=2.31
 
 # ---------------- TRAINING ONLY, NOT ON THE DEMO LAPTOP ----------------
 # Install these on Kaggle. The judged demo must not depend on them.
-# torch>=2.1
-# segmentation-models-pytorch>=0.3.3
+torch>=2.14,<2.15
+segmentation-models-pytorch>=0.5,<0.6
 # albumentations>=1.4
 # scikit-learn>=1.4
 
