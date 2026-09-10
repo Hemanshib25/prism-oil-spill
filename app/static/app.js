@@ -91,9 +91,8 @@
 
     map.attributionControl.setPrefix("");
     map.attributionControl.addAttribution("TideTrace offline console");
-
     L.control.zoom({ position: "topright" }).addTo(map);
-    L.control.scale({ imperial: false, position: "bottomright" }).addTo(map);
+
 
     // Exposed for diagnostics and for the browser checks that drive this map
     // during development. Read-only as far as the app is concerned.
@@ -236,7 +235,7 @@
         // The tile's own north-west corner, stamped like a chart margin.
         ctx.fillStyle = "rgba(148, 178, 198, 0.30)";
         ctx.font = "10px ui-monospace, Consolas, monospace";
-        ctx.fillText(_dm(nw.lat, "NS") + "  " + _dm(nw.lng, "EW"), 6, 14);
+
 
         return tile;
       }
@@ -382,7 +381,7 @@
       first.addTo(map);
       state.basemap = first;
 
-      L.control.layers(bases, overlays, { position: "topright", collapsed: true }).addTo(map);
+      
 
       // Only the four scene footprints were ever cached. Panning away from them
       // leaves a correct but bare graticule, and a bare graticule looks like a
@@ -1894,7 +1893,7 @@
       setTimeout(function () { fitScene(scene, attempt + 1); }, 50);
       return;
     }
-    map.fitBounds(box, { padding: [24, 24], animate: false });
+    map.fitBounds(box, { padding: [24, 24], animate: false }); map.setZoom(map.getZoom() + 1);
   }
 
   function tickClock() {

@@ -55,7 +55,7 @@
   "stats": {
     "satellite": {
       "saved": 0,
-      "cached": 3231,
+      "cached": 800,
       "missing": 0,
       "failed": 0,
       "ext": "jpg",
